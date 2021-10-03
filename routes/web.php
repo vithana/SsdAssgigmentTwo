@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/logout', function(){
+Route::get('/logout', function () {
     auth()->logout();
     return redirect('/');
 });
@@ -30,4 +30,10 @@ Route::get('login/google/callback', 'Auth\LoginController@handleProviderGoogleCa
 
 Route::get('/drive', 'DriveController@getDrive');
 
+Route::get('/drive/upload', 'DriveController@uploadFile');
 
+Route::post('/drive/upload', 'DriveController@uploadFile');
+
+Route::get('/drive/create', 'DriveController@create');
+
+Route::get('/drive/delete/{id}', 'DriveController@deleteFile');
