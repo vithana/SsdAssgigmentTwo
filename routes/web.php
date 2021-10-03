@@ -28,3 +28,6 @@ Route::get('/login/google', 'Auth\LoginController@redirectToGoogleProvider');
 
 Route::get('login/google/callback', 'Auth\LoginController@handleProviderGoogleCallback');
 
+Route::get('/drive', 'DriveController@getDrive');
+
+
