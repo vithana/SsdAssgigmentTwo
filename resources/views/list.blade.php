@@ -4,7 +4,7 @@
     <h1 class="align-self-center">
         Upload Your Files To Your Google Drive
     </h1>
-    <form action="/drive/upload" method="post" enctype="multipart/form-data" class="mb-4 mt-4">
+    <form action="/drive/upload" method="post" enctype="multipart/form-data" class="mb-5 mt-4">
         <input type="file" name="file">
         <button class="btn btn-success" type="submit">Submit</button>
         {{csrf_field()}}
